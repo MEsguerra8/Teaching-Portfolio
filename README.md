@@ -6,7 +6,7 @@ It is part of the BEAM-English project — a landing page and demo site designed
 ---
 
 ## 🌟 What You’ll Find Here
-- **Demo Page** (`index.html`) — a live preview of my teaching approach  
+- **Demo Page** (`demos.html`) — a live preview of my teaching approach  
 - **Portfolio Page** (`portfolio.html`) — examples of lessons, activities, and resources  
 - **Images & Styling** — thumbnails, backgrounds, and CSS for a cohesive design
 
