@@ -413,11 +413,19 @@ body.demo {
     align-items: center;
   }
 
+  .content,
+  .content h1,
+  .content h2,
+  .content h3,
+  .content p {
+    text-align: center; /* center all text inside content */
+  }
+
   .content {
     padding: 20px;
     width: 100%;
     max-width: 600px;
-    margin: 0 auto; /* centers content */
+    margin: 0 auto; /* centers content block */
   }
 
   .cards {
@@ -429,7 +437,7 @@ body.demo {
   .card {
     width: 90%;
     max-width: 500px;
-    margin: 15px auto; /* centers each card */
+    margin: 15px auto;
   }
 
   .cert-row {
@@ -444,6 +452,7 @@ body.demo {
     margin: 15px auto;
   }
 }
+
 
 /* Fade-in animation for mobile header */
 @keyframes headerFadeIn {
