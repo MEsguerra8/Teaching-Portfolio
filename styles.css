@@ -399,34 +399,6 @@ body.demo {
 .lightbox.hide .lightbox-content {
   animation: fadeOut 0.4s ease forwards;
 }
-/* Mobile header styling */
-.mobile-header {
-  display: none; /* hidden on desktop */
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to bottom, #2a4d7a, #4a6fa5); /* gradient band */
-  color: #fff;
-}
-
-.mobile-pic {
-  width: 160px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.mobile-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  margin: 0;
-  color: #fff;
-}
-
-.mobile-tagline {
-  font-size: 16px;
-  margin-top: 8px;
-  color: #e0e0e0;
-}
 @media (max-width: 768px) {
   .sidebar {
     display: none; /* hide sidebar on mobile */
