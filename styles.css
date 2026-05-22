@@ -121,6 +121,15 @@ body.demo .demo-gallery p {
   margin-right: 8px;
 }
 
+/* Center text blocks inside sidebar */
+.sidebar .name,
+.sidebar .tagline,
+.sidebar .nav-links {
+  text-align: center;
+  width: 100%; /* ensures they span sidebar width */
+}
+
+
 /* === Content Area === */
 .content {
   flex: 1;
