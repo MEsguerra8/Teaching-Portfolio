@@ -438,10 +438,32 @@ body.demo {
 
   .container {
     flex-direction: column; /* stack content */
+    align-items: center;
   }
 
   .content {
     padding: 20px;
+    width: 100%;            /* ensure content spans full width */
+    max-width: 600px;
+  }
+  .cards {
+    flex-direction: column; /* stack cards vertically */
+    align-items: center;    /* center cards */
+  }
+
+  .card {
+    width: 100%;            /* cards take full width */
+    max-width: 500px;       /* optional: keep them neat */
+  }
+
+  .cert-row {
+    flex-direction: column; /* stack certifications vertically */
+    align-items: center;
+  }
+
+  .cert-card {
+    width: 100%;
+    max-width: 500px;
   }
 }
 /* Fade-in animation for mobile header */
