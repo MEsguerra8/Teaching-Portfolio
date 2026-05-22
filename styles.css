@@ -59,14 +59,34 @@ body.demo .demo-gallery p {
   display: block;
 }
 
+/* Responsive scaling for profile photo */
+@media (min-width: 1200px) {
+  .profile-pic {
+    width: 220px; /* larger on wide desktop */
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-pic {
+    width: 160px; /* smaller on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 140px; /* smaller on phones */
+  }
+}
+
 .name {
   font-size: 22px;
-  margin: 10px 0;
+  margin: 10px 0 4px;
 }
 
 .tagline {
   font-size: 14px;
   color: #ddd;
+  margin-top: 4px;
   margin-bottom: 20px;
 }
 
