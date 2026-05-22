@@ -409,49 +409,47 @@ body.demo {
   }
 
   .container {
-    flex-direction: column; /* stack content */
+    flex-direction: column;
     align-items: center;
   }
 
   .content {
     padding: 20px;
-    width: 100%;            /* ensure content spans full width */
+    width: 100%;
     max-width: 600px;
+    margin: 0 auto; /* centers content */
   }
-  .cards {
-  flex-direction: column;   /* stack cards vertically */
-  align-items: center;      /* center the flex items */
-  width: 100%;              /* ensure container spans full width */
-}
 
-.card {
-  width: 90%;               /* card width relative to screen */
-  max-width: 500px;         /* keep them neat */
-  margin: 10px auto;        /* auto margins center the card */
-}
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 500px;
+    margin: 15px auto; /* centers each card */
+  }
 
   .cert-row {
-    flex-direction: column; /* stack certifications vertically */
+    flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .cert-card {
-    width: 100%;
+    width: 90%;
     max-width: 500px;
+    margin: 15px auto;
   }
 }
+
 /* Fade-in animation for mobile header */
 @keyframes headerFadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.mobile-header {
-  display: none; /* hidden on desktop */
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to bottom, #2a4d7a, #4a6fa5);
-  color: #fff;
-  animation: headerFadeIn 0.8s ease forwards; /* apply fade-in */
-}
+
 
