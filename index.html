@@ -89,31 +89,39 @@
       </section>
     </main>
   </div>
-  <script>
-  // Get elements
+ <script>
   const profilePic = document.getElementById("profilePic");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
   const closeBtn = document.querySelector(".lightbox .close");
 
-  // Show lightbox when photo clicked
+  // Show lightbox
   profilePic.onclick = function() {
     lightbox.style.display = "block";
+    lightbox.classList.remove("hide");
+    lightbox.classList.add("show");
     lightboxImg.src = this.src;
   }
 
-  // Close lightbox
-  closeBtn.onclick = function() {
-    lightbox.style.display = "none";
+  // Close lightbox with fade-out
+  function closeLightbox() {
+    lightbox.classList.remove("show");
+    lightbox.classList.add("hide");
+    setTimeout(() => {
+      lightbox.style.display = "none";
+    }, 400); // match fadeOut duration
   }
 
-  // Close when clicking outside the image
+  closeBtn.onclick = closeLightbox;
+
   window.onclick = function(event) {
     if (event.target == lightbox) {
-      lightbox.style.display = "none";
+      closeLightbox();
     }
   }
 </script>
+</body>
+</html>
 
 </body>
 </html>
