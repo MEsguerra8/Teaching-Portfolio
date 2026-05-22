@@ -45,12 +45,18 @@ body.demo .demo-gallery p {
   width: 250px;
   padding: 20px;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers all children vertically */
+  min-height: 100vh;       /* makes sidebar span full height */
+}
 }
 
 .profile-pic {
-  width: 120px;
+  width: 180px;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .name {
