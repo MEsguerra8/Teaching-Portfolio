@@ -40,24 +40,27 @@ body.demo .demo-gallery p {
 
 /* === Sidebar === */
 .sidebar {
-  background-color: #2a4d7a; /* navy highlight */
+  background-color: #2a4d7a;
   color: #fff;
   width: 250px;
   padding: 20px;
-  text-align: center;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centers all children vertically */
-  min-height: 100vh;       /* makes sidebar span full height */
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .profile-pic {
   width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
-  display: block;        /* makes auto margins work */
-  margin: 0 auto 20px;   /* centers horizontally */
+  display: block;
+  margin-bottom: 20px;
 }
 
 /* Responsive scaling for profile photo */
