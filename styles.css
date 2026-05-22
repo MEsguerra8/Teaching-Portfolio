@@ -48,6 +48,7 @@ body.demo .demo-gallery p {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center; /* centers all children vertically */
   min-height: 100vh;       /* makes sidebar span full height */
 }
@@ -55,8 +56,8 @@ body.demo .demo-gallery p {
 .profile-pic {
   width: 180px;
   border-radius: 50%;
-  margin: 0 auto 20px; /* centers horizontally */
-  display: block;
+  display: block;        /* makes auto margins work */
+  margin: 0 auto 20px;   /* centers horizontally */
 }
 
 /* Responsive scaling for profile photo */
