@@ -13,7 +13,15 @@
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <img src="images/corpfinal2.png" alt="Marianne Esguerra" class="profile-pic">
+      <!-- Sidebar photo -->
+<img src="images/corpfinal2.png" alt="Marianne Esguerra" class="profile-pic" id="profilePic">
+
+<!-- Lightbox modal -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightboxImg">
+</div>
+
       <h2 class="name">Marianne Esguerra</h2>
       <p class="tagline">TESOL-Certified Educator for Kids, Teens & Adults</p>
       <nav class="nav-links">
@@ -81,5 +89,31 @@
       </section>
     </main>
   </div>
+  <script>
+  // Get elements
+  const profilePic = document.getElementById("profilePic");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const closeBtn = document.querySelector(".lightbox .close");
+
+  // Show lightbox when photo clicked
+  profilePic.onclick = function() {
+    lightbox.style.display = "block";
+    lightboxImg.src = this.src;
+  }
+
+  // Close lightbox
+  closeBtn.onclick = function() {
+    lightbox.style.display = "none";
+  }
+
+  // Close when clicking outside the image
+  window.onclick = function(event) {
+    if (event.target == lightbox) {
+      lightbox.style.display = "none";
+    }
+  }
+</script>
+
 </body>
 </html>
