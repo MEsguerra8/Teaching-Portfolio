@@ -51,7 +51,6 @@ body.demo .demo-gallery p {
   justify-content: center; /* centers all children vertically */
   min-height: 100vh;       /* makes sidebar span full height */
 }
-}
 
 .profile-pic {
   width: 180px;
@@ -445,3 +444,18 @@ body.demo {
     padding: 20px;
   }
 }
+/* Fade-in animation for mobile header */
+@keyframes headerFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-header {
+  display: none; /* hidden on desktop */
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #2a4d7a, #4a6fa5);
+  color: #fff;
+  animation: headerFadeIn 0.8s ease forwards; /* apply fade-in */
+}
+
