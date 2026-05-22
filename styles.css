@@ -447,14 +447,16 @@ body.demo {
     max-width: 600px;
   }
   .cards {
-    flex-direction: column; /* stack cards vertically */
-    align-items: center;    /* center cards */
-  }
+  flex-direction: column;   /* stack cards vertically */
+  align-items: center;      /* center the flex items */
+  width: 100%;              /* ensure container spans full width */
+}
 
-  .card {
-    width: 100%;            /* cards take full width */
-    max-width: 500px;       /* optional: keep them neat */
-  }
+.card {
+  width: 90%;               /* card width relative to screen */
+  max-width: 500px;         /* keep them neat */
+  margin: 10px auto;        /* auto margins center the card */
+}
 
   .cert-row {
     flex-direction: column; /* stack certifications vertically */
