@@ -10,6 +10,11 @@ body {
   min-height: 100vh;
 }
 
+/* === Mobile Header (hidden by default) === */
+.mobile-header {
+  display: none;
+}
+
 /* === Portfolio Fonts === */
 body.portfolio {
   font-family: 'Open Sans', sans-serif;
@@ -35,7 +40,6 @@ body.demo .demo-gallery p {
   color: #2c9be5;      /* dark gray for intro */
   margin-bottom: 30px;
 }
-
 
 
 /* === Sidebar === */
