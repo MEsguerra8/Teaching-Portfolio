@@ -352,4 +352,59 @@ body.philosophy-page {
     max-width: 200px;
   }
 }
+/* Header layout: text centered, photo snug right */
+.editorial-header {
+  display: flex;
+  justify-content: center;   /* centers the whole block */
+  align-items: center;
+  gap: 20px;                 /* small space between text and photo */
+  margin-bottom: 40px;
+  border-bottom: 2px solid #ebdcd0;
+  padding-bottom: 30px;
+}
+
+/* Text block centered */
+.header-left-text {
+  flex: 1;
+  text-align: center;        /* centers all text */
+}
+
+/* Photo block small and close */
+.header-right-photo {
+  flex: 0 0 auto;            /* shrink to fit photo */
+}
+
+.narrative-pic {
+  width: 100px;              /* small size */
+  height: auto;
+  object-fit: cover;
+
+  /* blurred/faded edges */
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .editorial-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-right-photo {
+    margin-top: 15px;
+  }
+
+  .narrative-pic {
+    width: 50%;              /* photo grows a bit on mobile */
+    max-width: 200px;
+  }
+}
+
 
