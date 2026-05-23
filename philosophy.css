@@ -409,11 +409,12 @@ body.philosophy-page {
 
 .header-divider {
   border: none;
-  height: 3px;
+  height: 4px;
   background-color: coral;
   width: fit-content;   /* only as wide as the text */
   margin: 10px auto;
 }
+
 
 
 
