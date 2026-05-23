@@ -348,3 +348,26 @@ body.philosophy-page {
   mask-position: center;
   mask-size: cover;
 }
+
+  /* Make photo smaller and add blurred edges */
+.header-left {
+  flex: 0 0 120px;   /* reduce width even more */
+}
+
+.narrative-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+
+  /* blurred/faded edges */
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
