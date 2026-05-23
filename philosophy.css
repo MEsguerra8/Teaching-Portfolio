@@ -316,3 +316,14 @@ body.philosophy-page {
     gap: 20px;
   }
   .
+  /* Shrink the photo frame itself */
+.header-left {
+  flex: 0 0 130px;   /* half of the original 260px */
+}
+
+.narrative-pic {
+  width: 100%;       /* fill the smaller frame */
+  height: auto;
+  display: block;
+}
+
