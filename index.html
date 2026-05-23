@@ -80,22 +80,30 @@
 </section>
 
 
-      <!-- Certifications -->
-      <section class="certifications">
-        <h2>Certifications & Credentials</h2>
-        <div class="cert-row">
-          <div class="cert-card">
-            <i class="fas fa-certificate"></i>
-            <p><strong>TESOL Certificate</strong><br>Arizona State University</p>
-          </div>
-          <div class="cert-card">
-            <i class="fas fa-globe"></i>
-            <p><strong>IELTS Academic</strong><br>Band 8 Score</p>
-          </div>
-        </div>
-      </section>
-    </main>
+     <!-- Certifications -->
+<section class="certifications">
+  <h2>Certifications & Credentials</h2>
+  <div class="cert-row">
+    <!-- TESOL Card -->
+    <div class="cert-card" onclick="openCert('tesol')">
+      <i class="fas fa-certificate"></i>
+      <p><strong>TESOL Certificate</strong><br>Arizona State University</p>
+    </div>
+
+    <!-- IELTS Card -->
+    <div class="cert-card" onclick="openCert('ielts')">
+      <i class="fas fa-globe"></i>
+      <p><strong>IELTS Academic</strong><br>Band 8 Score</p>
+    </div>
   </div>
+</section>
+
+<!-- Lightbox Overlay (shared for all certs) -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeCert()">&times;</span>
+  <img id="lightbox-img" class="cert-image" src="" alt="Certificate">
+</div>
+
  <script>
   const profilePic = document.getElementById("profilePic");
   const lightbox = document.getElementById("lightbox");
