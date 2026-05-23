@@ -109,10 +109,9 @@
   const closeBtn = document.querySelector("#cert-lightbox .close");
 
   function openCert(certId) {
-    const img = document.getElementById('cert-img');
     const certImages = {
-      tesol: 'images/TESOL.JPG',
-      ielts: 'images/IELTS.JPG'
+      tesol: 'images/TESOL.JPG',  /* <--- CHANGE FILE PATH / EXTENSION HERE */
+      ielts: 'images/IELTS.JPG'   /* <--- CHANGE FILE PATH / EXTENSION HERE */
     };
     img.src = certImages[certId];
     lightbox.style.display = 'block';
