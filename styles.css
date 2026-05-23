@@ -670,3 +670,325 @@ blockquote {
   display: inline-block;
   margin-top: 20px;
 }
+
+/* ==========================================================================
+   MARIANNE'S EDITORIAL PHILOSOPHY PAGE OVERHAUL (MATCHING VISUAL MOCKUP)
+   ========================================================================== */
+
+/* Structure & Layout Base Wrapper */
+.page-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Override the old page padding if needed */
+body.philosophy-page {
+  background: #faf8f3 !important; /* Forces the warm ivory cream from the mockup */
+  padding: 0;
+}
+
+/* === EDITORIAL SPLIT HEADER === */
+.editorial-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #ebdcd0;
+  padding-bottom: 40px;
+}
+
+.header-left {
+  flex: 0 0 260px;
+}
+
+.photo-frame {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(42, 77, 122, 0.1);
+  border: 1px solid #ebdcd0;
+}
+
+.narrative-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.header-right {
+  flex: 1;
+}
+
+.main-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.cursive-subtitle {
+  font-family: 'Alex Brush', cursive;
+  font-size: 68px;
+  color: var(--coral);
+  margin: -5px 0 10px 0;
+  line-height: 1;
+}
+
+.header-divider {
+  border: none;
+  height: 2px;
+  background-color: var(--coral);
+  width: 100%;
+  margin: 15px 0;
+}
+
+.header-lead {
+  font-size: 17px;
+  color: var(--navy);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* === NARRATIVE GRAPHICS & ACCENTS === */
+.section-title-accent {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: var(--navy);
+  position: relative;
+  padding-left: 18px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.section-title-accent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 6px;
+  background-color: var(--coral);
+  border-radius: 2px;
+}
+
+.philosophy-text p {
+  font-size: 15.5px;
+  color: #3f4d5c;
+  line-height: 1.8;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
+.highlight-text {
+  color: var(--navy);
+  font-weight: 700;
+  border-bottom: 2px solid var(--coral);
+}
+
+/* === CUSTOM CALLOUTS & CALLOUT BOXES === */
+.quote-box {
+  background-color: #fdf7f2; /* Light custom warm glow background box */
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin: 40px 0;
+  position: relative;
+  text-align: center;
+  border: 1px solid #f5e6dc;
+}
+
+.quote-mark {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  color: var(--coral);
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  line-height: 1;
+  opacity: 0.5;
+}
+
+.quote-content {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--navy) !important;
+  font-weight: 600;
+  margin: 0 !important;
+  line-height: 1.6;
+  text-align: center !important;
+}
+
+.inline-quote {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--navy);
+  font-weight: 600;
+  text-align: center;
+  margin: 35px 0;
+  padding: 12px 0;
+  border-top: 1px solid #eade97e;
+  border-bottom: 1px solid #ebdcd0;
+}
+
+.small-quote-mark {
+  color: var(--coral);
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === TWO-COLUMN SIDE-BY-SIDE PANELS === */
+.style-techniques-grid {
+  display: flex;
+  gap: 30px;
+  margin: 45px 0;
+}
+
+.narrative-card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #ebdcd0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.card-heading {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+  font-size: 19px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ebdcd0;
+  padding-bottom: 12px;
+}
+
+.card-heading .icon {
+  margin-right: 8px;
+}
+
+.narrative-card p {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+  text-align: left !important;
+  margin-bottom: 15px;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-list li {
+  font-size: 14.5px;
+  padding: 8px 0 8px 22px;
+  position: relative;
+  color: #3f4d5c;
+  text-align: left;
+}
+
+.card-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--coral);
+  font-size: 20px;
+  top: 3px;
+}
+
+.card-list.bold-items li {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* === BOTTOM BANNER SECTION === */
+.banner-quote {
+  background-color: #e9ece6; /* Soft green-tinted neutral accent strip */
+  border-left: 6px solid var(--coral);
+  padding: 22px 35px;
+  margin: 45px 0;
+  position: relative;
+  border-radius: 0 8px 8px 0;
+}
+
+.banner-quote p {
+  font-style: italic;
+  font-size: 16px;
+  color: var(--navy);
+  font-weight: 600;
+  margin: 0 !important;
+  text-align: left !important;
+  line-height: 1.6;
+}
+
+.quote-mark-orange {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--coral);
+  font-size: 50px;
+  position: absolute;
+  top: -5px;
+  left: 12px;
+  opacity: 0.25;
+}
+
+/* === ACTION FOOTER CONTROLS === */
+.philosophy-footer {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.portfolio-btn {
+  display: inline-block;
+  background-color: var(--coral);
+  color: white !important;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 14px 45px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(255, 138, 117, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.portfolio-btn:hover {
+  background-color: #e5735f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 138, 117, 0.4);
+}
+
+/* === MOBILE COHESION === */
+@media (max-width: 768px) {
+  .editorial-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    padding-bottom: 25px;
+  }
+  .header-left {
+    flex: 0 0 auto;
+    width: 180px;
+  }
+  .main-title { font-size: 32px; }
+  .cursive-subtitle { font-size: 56px; }
+  
+  .style-techniques-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .quote-box {
+    padding: 20px 25px;
+  }
+  .quote-content {
+    font-size: 16px;
+  }
+  .philosophy-text p {
+    text-align: left;
+  }
+}
