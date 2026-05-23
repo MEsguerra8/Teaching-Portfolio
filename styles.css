@@ -832,7 +832,7 @@ body.philosophy-page {
   text-align: center;
   margin: 35px 0;
   padding: 12px 0;
-  border-top: 1px solid #eade97e;
+  border-top: 1px solid #ebdcd0;    /* <--- Fixed to a clean, crisp 6-character hex code */
   border-bottom: 1px solid #ebdcd0;
 }
 
