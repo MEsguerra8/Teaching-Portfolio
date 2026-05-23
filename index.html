@@ -12,22 +12,23 @@
 </head>
 <body class="portfolio">
   <!-- Mobile header (shows only on mobile) -->
-<div class="mobile-header">
-  <img src="images/corpfinal2.png" alt="Marianne Esguerra" class="mobile-pic">
-  <h1 class="mobile-title">Marianne Esguerra</h1>
-  <p class="mobile-tagline">TESOL-Certified English Teacher for Kids, Teens & Adults</p> <!-- optional tagline -->
-</div>
+  <div class="mobile-header">
+    <img src="images/corpfinal2.png" alt="Marianne Esguerra" class="mobile-pic">
+    <h1 class="mobile-title">Marianne Esguerra</h1>
+    <p class="mobile-tagline">TESOL-Certified English Teacher for Kids, Teens & Adults</p>
+  </div>
+
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
       <!-- Sidebar photo -->
-<img src="images/corpfinal2.png" alt="Marianne Esguerra" class="profile-pic" id="profilePic">
+      <img src="images/corpfinal2.png" alt="Marianne Esguerra" class="profile-pic" id="profilePic">
 
-<!-- Lightbox modal -->
-<div id="photo-lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="photoImg">
-</div>
+      <!-- Lightbox modal -->
+      <div id="photo-lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="photoImg">
+      </div>
 
       <h2 class="name">Marianne Esguerra</h2>
       <p class="tagline">TESOL-Certified English Teacher for Kids, Teens & Adults</p>
@@ -53,96 +54,97 @@
         <a href="philosophy.html" class="btn">Read My Full Teaching Philosophy</a>
       </section>
 
-     <section class="cards">
-  <!-- Demo Videos -->
-  <div class="card demo">
-    <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
-    <h3>Classroom Demo Videos</h3>
-    <p>Interactive teaching demonstrations focused on <strong>young learners</strong>.</p>
-    <a href="demos.html" class="card-button">Watch My Demos</a>
+      <section class="cards">
+        <!-- Demo Videos -->
+        <div class="card demo">
+          <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
+          <h3>Classroom Demo Videos</h3>
+          <p>Interactive teaching demonstrations focused on <strong>young learners</strong>.</p>
+          <a href="demos.html" class="card-button">Watch My Demos</a>
+        </div>
+
+        <!-- Lesson Plans -->
+        <div class="card lesson">
+          <div class="card-icon"><i class="fas fa-book-open"></i></div>
+          <h3>Lesson Plans Across Levels</h3>
+          <p>Sample lesson plans for <strong>kids</strong>, <strong>secondary students</strong>, and <strong>adults</strong>.</p>
+          <a href="lesson-plans.html" class="card-button">View Lesson Plans</a>
+        </div>
+
+        <!-- Supplemental Resources -->
+        <div class="card resources">
+          <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Supplemental Resources</h3>
+          <p>Creative stories, literacy activities, and adaptable materials for all ages.</p>
+          <a href="resources.html" class="card-button">Explore Resources</a>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="certifications">
+        <h2>Certifications & Credentials</h2>
+        <div class="cert-row">
+          <!-- TESOL Card -->
+          <div class="cert-card" onclick="openCert('tesol')">
+            <i class="fas fa-certificate"></i>
+            <p><strong>TESOL Certificate</strong><br>Arizona State University</p>
+          </div>
+
+          <!-- IELTS Card -->
+          <div class="cert-card" onclick="openCert('ielts')">
+            <i class="fas fa-globe"></i>
+            <p><strong>IELTS Academic</strong><br>Band 8 Score</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Lightbox Overlay -->
+      <div id="cert-lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="cert-img" class="cert-image" src="" alt="Certificate">
+      </div>
+    </main>
   </div>
 
-  <!-- Lesson Plans -->
-  <div class="card lesson">
-    <div class="card-icon"><i class="fas fa-book-open"></i></div>
-    <h3>Lesson Plans Across Levels</h3>
-    <p>Sample lesson plans for <strong>kids</strong>, <strong>secondary students</strong>, and <strong>adults</strong>.</p>
-    <a href="lesson-plans.html" class="card-button">View Lesson Plans</a>
-  </div>
+  <script>
+    const certlightbox = document.getElementById("cert-lightbox");
+    const closeBtn = document.querySelector("#cert-lightbox .close");
+    const certImg = document.getElementById('cert-img'); // Added this to find the target image tag
 
-  <!-- Supplemental Resources -->
-  <div class="card resources">
-    <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-    <h3>Supplemental Resources</h3>
-    <p>Creative stories, literacy activities, and adaptable materials for all ages.</p>
-    <a href="resources.html" class="card-button">Explore Resources</a>
-  </div>
-</section>
-
-
-    <!-- Certifications -->
-<section class="certifications">
-  <h2>Certifications & Credentials</h2>
-  <div class="cert-row">
-    <!-- TESOL Card -->
-    <div class="cert-card" onclick="openCert('tesol')">
-      <i class="fas fa-certificate"></i>
-      <p><strong>TESOL Certificate</strong><br>Arizona State University</p>
-    </div>
-
-    <!-- IELTS Card -->
-    <div class="cert-card" onclick="openCert('ielts')">
-      <i class="fas fa-globe"></i>
-      <p><strong>IELTS Academic</strong><br>Band 8 Score</p>
-    </div>
-  </div>
-</section>
-
-<!-- Certifications Lightbox Overlay -->
-<div id="cert-lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img id="cert-img" class="cert-image" src="" alt="Certificate">
-</div>
-
-<script>
-  const certlightbox = document.getElementById("cert-lightbox");
-  const closeBtn = document.querySelector("#cert-lightbox .close");
-
-  function openCert(certId) {
-    const certImages = {
-      tesol: 'images/TESOL.JPG',  /* <--- CHANGE FILE PATH / EXTENSION HERE */
-      ielts: 'images/IELTS.JPG'   /* <--- CHANGE FILE PATH / EXTENSION HERE */
-    };
-    img.src = certImages[certId];
-    lightbox.style.display = 'block';
-    lightbox.classList.remove("hide");
-    lightbox.classList.add("show");
-  }
-
-  function closeLightbox() {
-    certlightbox.classList.remove("show");
-    certlightbox.classList.add("hide");
-    setTimeout(() => {
-      certlightbox.style.display = "none";
-    }, 400); // match fadeOut duration
-  }
-
-  certcloseBtn.onclick = closeCertLightbox;
-  window.onclick = function(event) {
-    if (event.target == certlightbox) {
-      closeCertLightbox();
+    function openCert(certId) {
+      const certImages = {
+        tesol: 'images/TESOL.JPG',  
+        ielts: 'images/IELTS.JPG'   
+      };
+      
+      certImg.src = certImages[certId]; // Uses the correct variable name
+      certlightbox.style.display = 'block'; // Uses the correct variable name
+      certlightbox.classList.remove("hide");
+      certlightbox.classList.add("show");
     }
-  };
 
-  // Disable right-click on cert images
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.cert-image').forEach(img => {
-      img.addEventListener('contextmenu', e => e.preventDefault());
+    function closeLightbox() {
+      certlightbox.classList.remove("show");
+      certlightbox.classList.add("hide");
+      setTimeout(() => {
+        certlightbox.style.display = "none";
+      }, 400); // match fadeOut duration
+    }
+
+    closeBtn.onclick = closeLightbox; // Linked to your valid variable and function names
+
+    window.onclick = function(event) {
+      if (event.target == certlightbox) {
+        closeLightbox();
+      }
+    };
+
+    // Disable right-click on cert images
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.cert-image').forEach(img => {
+        img.addEventListener('contextmenu', e => e.preventDefault());
+      });
     });
-  });
-<script>
-
-    
+  </script>
 </body>
 </html>
-
