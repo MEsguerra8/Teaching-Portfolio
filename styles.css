@@ -92,9 +92,9 @@ body.demo .demo-gallery p {
   margin-bottom: 20px;
 }
 .philosophy-header {
-  display: flex;          /* put photo + title side by side */
-  align-items: center;    /* vertically align them */
-  gap: 20px;              /* space between photo and text */
+  display: flex;          /* photo + title side by side */
+  align-items: center;    /* vertical alignment */
+  gap: 20px;              /* spacing between them */
   margin-bottom: 30px;
 }
 
@@ -107,18 +107,21 @@ body.demo .demo-gallery p {
 @media (min-width: 1200px) {
   .profile-pic {
     width: 220px;
+    height: 220px;
   }
 }
 
 @media (max-width: 1024px) {
   .profile-pic {
     width: 160px;
+    height: 160px; 
   }
 }
 
 @media (max-width: 768px) {
   .profile-pic {
     width: 140px;
+    height: 140px;
   }
 }
 
