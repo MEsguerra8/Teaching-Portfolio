@@ -74,13 +74,15 @@ body.demo .demo-gallery p {
   margin-top: 60px;
 }
 .profile-pic {
-  width: 160px;
-  height: 200px;
+  width: 180px !important;
+  height: 180px !important;
+  flex-shrink: 0;            /* Stops the sidebar from squishing it */
   object-fit: cover;
   object-position: center;
-  border-radius: 100%;
+  border-radius: 50%;        /* Keeps it a perfect circle */
   display: block;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 /* Responsive scaling for profile photo */
