@@ -17,6 +17,8 @@ body {
   color: white;
   text-align: center;
   padding: 20px;
+  width: 100%;          /* make it span full width */
+  box-sizing: border-box; /* include padding in width */
 }
 
 .mobile-header img {
@@ -97,6 +99,11 @@ body.demo .demo-gallery p {
 @media (max-width: 768px) {
   .profile-pic {
     width: 140px; /* smaller on phones */
+  }
+  .mobile-header {
+    display: block;   /* show only on mobile */
+    width: 100%;      /* span full width */
+    box-sizing: border-box;
   }
 }
 
