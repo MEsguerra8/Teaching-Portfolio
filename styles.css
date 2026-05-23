@@ -55,8 +55,8 @@ body.demo .demo-gallery p {
   margin-bottom: 30px;
 }
 
-/* === Sidebar === */
-.sidebar {
+/* === Sidebar (Strictly Scoped to Desktop Layout) === */
+.container .sidebar {
   background-color: #2a4d7a;
   color: #fff;
   width: 250px;
@@ -67,43 +67,45 @@ body.demo .demo-gallery p {
   align-items: center;
   justify-content: center;   
   min-height: 100vh;
+  flex-shrink: 0;
 }
 
 .sidebar-content {
   margin-top: 60px;
 }
 
-.profile-pic {
-  width: 180px;
-  height: 180px;
+/* Force profile pic to stay structurally locked inside the sidebar container */
+.container .sidebar .profile-pic {
+  width: 180px !important;
+  height: 180px !important;
   flex-shrink: 0;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
   display: block;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   cursor: pointer;
 }
 
-/* Responsive scaling for profile photo */
+/* Responsive scaling strictly for portfolio sidebar photo */
 @media (min-width: 1200px) {
-  .profile-pic {
-    width: 220px;
-    height: 220px;
+  .container .sidebar .profile-pic {
+    width: 220px !important;
+    height: 220px !important;
   }
 }
 
 @media (max-width: 1024px) {
-  .profile-pic {
-    width: 160px;
-    height: 160px; 
+  .container .sidebar .profile-pic {
+    width: 160px !important;
+    height: 160px !important; 
   }
 }
 
 @media (max-width: 768px) {
-  .profile-pic {
-    width: 140px;
-    height: 140px;
+  .container .sidebar .profile-pic {
+    width: 140px !important;
+    height: 140px !important;
   }
 }
 
@@ -401,7 +403,7 @@ body.demo {
 .lightbox.hide .cert-image { animation: fadeOut 0.4s ease forwards; }
 
 @media (max-width: 768px) {
-  .sidebar { display: none; }
+  .container .sidebar { display: none; }
   .mobile-header { display: block; }
   .container { flex-direction: column; align-items: center; }
   .content, .content h1, .content h2, .content h3, .content p { text-align: center; }
@@ -470,9 +472,10 @@ body.philosophy-page {
 }
 
 .page-wrapper .narrative-pic {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   display: block;
+  border-radius: 0 !important; /* Prevents philosophy layout from turning into a sidebar circle */
 }
 
 /* Section 2 Grid Layout */
@@ -490,4 +493,176 @@ body.philosophy-page {
 
 /* Section Decorators */
 .page-wrapper .section-title-accent {
-  font-family: 'Montserrat', sans
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: var(--navy);
+  position: relative;
+  padding-left: 18px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.page-wrapper .section-title-accent::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 4px; bottom: 4px;
+  width: 6px;
+  background-color: var(--coral);
+  border-radius: 2px;
+}
+
+.page-wrapper .philosophy-text p {
+  font-size: 15.5px;
+  color: #3f4d5c;
+  line-height: 1.8;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
+.page-wrapper .quote-box {
+  background-color: #fdf7f2;
+  border-radius: 8px;
+  padding: 25px 35px;
+  border: 1px solid #f5e6dc;
+  text-align: center;
+}
+
+.page-wrapper .quote-content {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--navy);
+  font-weight: 600;
+  margin: 0;
+}
+
+.page-wrapper .callout-banner {
+  background-color: #f3f0e7;
+  padding: 20px 30px;
+  border-radius: 4px;
+  border-left: 4px solid var(--coral);
+}
+
+.page-wrapper .callout-text {
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* Section 3 Layout */
+.page-wrapper .story-split {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.page-wrapper .story-left-graphic {
+  flex: 0 0 320px;
+  text-align: center;
+}
+
+.page-wrapper .story-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-wrapper .story-right-text {
+  flex: 1;
+}
+
+.page-wrapper .border-quote {
+  border-left: 2px solid var(--coral);
+  padding-left: 25px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* Section 4 Layout */
+.page-wrapper .techniques-grid {
+  display: flex;
+  gap: 35px;
+}
+
+.page-wrapper .card-heading {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.page-wrapper .card-inner-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.page-wrapper .inner-list-box {
+  flex: 0 0 220px;
+  background-color: #fcf8f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.page-wrapper .inner-text-box {
+  flex: 1;
+}
+
+.page-wrapper .techniques-list {
+  list-style: none;
+  padding: 0;
+}
+
+.page-wrapper .techniques-list li {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* === ACTION FOOTER CONTROLS === */
+.page-wrapper .philosophy-footer {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.page-wrapper .portfolio-btn {
+  display: inline-block;
+  background-color: var(--coral);
+  color: white !important;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 14px 45px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(255, 138, 117, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.page-wrapper .portfolio-btn:hover {
+  background-color: #e5735f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 138, 117, 0.4);
+}
+
+/* --- PHILOSOPHY RESPONSIVE BREAKPOINTS --- */
+@media (max-width: 900px) {
+  .page-wrapper .editorial-header, 
+  .page-wrapper .bio-grid, 
+  .page-wrapper .story-split, 
+  .page-wrapper .techniques-grid,
+  .page-wrapper .card-inner-layout {
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .page-wrapper .header-right-photo {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .page-wrapper .story-left-graphic,
+  .page-wrapper .inner-list-box {
+    flex: none;
+    width: 100%;
+  }
+}
