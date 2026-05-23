@@ -278,7 +278,7 @@ header h3 {
 }
 /* === Certifications Lightbox === */
 .lightbox {
-  display: none; /* hidden by default */
+  display: none; 
   position: fixed;
   z-index: 999;
   left: 0;
@@ -287,16 +287,29 @@ header h3 {
   height: 100%;
   background-color: rgba(0,0,0,0.8);
   text-align: center;
+  opacity: 0;
+  pointer-events: none; /* Allows clicks to pass through when hidden */
+  transition: opacity 0.4s ease;
 }
 
-.lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 40px;
-  color: #fff;
+/* Actively shown state */
+.lightbox.show {
+  display: block !important;
+  opacity: 1;
+  pointer-events: auto; /* Restores clicking capability on the lightbox */
+}
+
+/* Hidden animation buffer state */
+.lightbox.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Enforce physical pointer clickability on the certification cards */
+.cert-card {
   cursor: pointer;
 }
+
 .cert-image {
   max-width: 90%;
   max-height: 90%;
