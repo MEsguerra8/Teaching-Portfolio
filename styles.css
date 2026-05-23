@@ -1105,4 +1105,29 @@ blockquote {
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+/* Force header text to center */
+.editorial-header {
+  justify-content: center;   /* centers the whole text block */
+}
+
+.editorial-header .header-right {
+  text-align: center;        /* centers all text inside the right block */
+}
+
+.main-title,
+.cursive-subtitle,
+.header-lead {
+  text-align: center;        /* centers each line */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional: highlight the lead sentence */
+.header-lead {
+  display: inline-block;
+  background: linear-gradient(to right, #fffaf5, #fdf2ef); /* ivory-peach gradient */
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
