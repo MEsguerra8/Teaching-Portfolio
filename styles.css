@@ -91,11 +91,11 @@ body.demo .demo-gallery p {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   margin-right: 30px;     /* Creates breathing room between the photo and the text */
-  margin-bottom: 20px;    /* Creates breathing room below the photo */
+  margin-bottom: 15px;    /* Creates breathing room below the photo */
 }
 .philosophy-header {
   display: block;          /* photo + title side by side */
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .philosophy-header h1 {
