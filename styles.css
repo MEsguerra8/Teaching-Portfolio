@@ -1240,3 +1240,207 @@ blockquote {
     text-align: center;
   }
 }
+/* ==========================================================================
+   PHILOSOPHY PAGE STRUCTURAL LAYOUT RULES (CLEAN DIVISION FRAMEWORK)
+   ========================================================================== */
+
+/* Main Container Foundation */
+.page-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px; /* Generous breathing space between structural sections */
+  box-sizing: border-box;
+}
+
+/* Base Body Control to match warm background theme */
+body.philosophy-page {
+  background-color: #faf8f3 !important;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+/* --- SECTION 1: HEADER SIDE-BY-SIDE SPLIT --- */
+.editorial-header {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.header-left-text {
+  flex: 1;
+}
+
+.header-right-photo {
+  flex: 0 0 380px; /* Gives the picture column a fixed, editorial width */
+}
+
+.photo-frame {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(42, 77, 122, 0.08);
+  border: 1px solid #ebdcd0;
+}
+
+.narrative-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- SECTION 2: BIOGRAPHY 2-COLUMN GRID --- */
+.bio-grid {
+  display: flex;
+  gap: 50px;
+}
+
+.bio-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Blockquotes & Highlight Banners */
+.quote-box {
+  background-color: #fdf7f2;
+  border-radius: 8px;
+  padding: 25px 35px;
+  border: 1px solid #f5e6dc;
+  text-align: center;
+}
+
+.quote-content {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--navy, #2a4d7a);
+  font-weight: 600;
+  margin: 0;
+}
+
+.callout-banner {
+  background-color: #f3f0e7;
+  padding: 20px 30px;
+  border-radius: 4px;
+  border-left: 4px solid var(--coral, #ff8a75);
+}
+
+.callout-text {
+  font-weight: 600;
+  color: var(--navy, #2a4d7a);
+  margin: 0;
+}
+
+/* --- SECTION 3: MOTHERHOOD GRID DIVISION --- */
+.story-split {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.story-left-graphic {
+  flex: 0 0 320px;
+  text-align: center;
+}
+
+.story-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.story-right-text {
+  flex: 1;
+}
+
+.border-quote {
+  border-left: 2px solid var(--coral, #ff8a75);
+  padding-left: 25px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* --- SECTION 4: CARDS PANEL ARCHITECTURE --- */
+.techniques-grid {
+  display: flex;
+  gap: 35px;
+}
+
+.narrative-card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #ebdcd0;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+}
+
+.card-heading {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy, #2a4d7a);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Inner architecture for lists inside the cards */
+.card-inner-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.inner-list-box {
+  flex: 0 0 220px;
+  background-color: #fcf8f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.inner-text-box {
+  flex: 1;
+}
+
+.small-quote {
+  margin-top: 20px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--navy, #2a4d7a);
+}
+
+.techniques-list {
+  list-style: none;
+  padding: 0;
+}
+
+.techniques-list li {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* --- MOBILE RESPONSIVE STACKING BREAKPOINTS --- */
+@media (max-width: 900px) {
+  .editorial-header, 
+  .bio-grid, 
+  .story-split, 
+  .techniques-grid,
+  .card-inner-layout {
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .header-right-photo {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .story-left-graphic,
+  .inner-list-box {
+    flex: none;
+    width: 100%;
+  }
+}
