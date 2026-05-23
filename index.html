@@ -24,9 +24,9 @@
 <img src="images/corpfinal2.png" alt="Marianne Esguerra" class="profile-pic" id="profilePic">
 
 <!-- Lightbox modal -->
-<div id="lightbox" class="lightbox">
+<div id="photo-lightbox" class="lightbox">
   <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightboxImg">
+  <img class="lightbox-content" id="photoImg">
 </div>
 
       <h2 class="name">Marianne Esguerra</h2>
@@ -99,17 +99,17 @@
 </section>
 
 <!-- Certifications Lightbox Overlay -->
-<div id="lightbox" class="lightbox">
+<div id="cert-lightbox" class="lightbox">
   <span class="close">&times;</span>
-  <img id="lightbox-img" class="cert-image" src="" alt="Certificate">
+  <img id="cert-img" class="cert-image" src="" alt="Certificate">
 </div>
 
 <script>
-  const lightbox = document.getElementById("lightbox");
-  const closeBtn = document.querySelector(".close");
+  const certlightbox = document.getElementById("cert-lightbox");
+  const closeBtn = document.querySelector("#cert-lightbox .close");
 
   function openCert(certId) {
-    const img = document.getElementById('lightbox-img');
+    const img = document.getElementById('cert-img');
     const certImages = {
       tesol: 'images/TESOL.JPG',
       ielts: 'images/IELTS.JPG'
@@ -121,17 +121,17 @@
   }
 
   function closeLightbox() {
-    lightbox.classList.remove("show");
-    lightbox.classList.add("hide");
+    certlightbox.classList.remove("show");
+    certlightbox.classList.add("hide");
     setTimeout(() => {
-      lightbox.style.display = "none";
+      certlightbox.style.display = "none";
     }, 400); // match fadeOut duration
   }
 
-  closeBtn.onclick = closeLightbox;
+  certcloseBtn.onclick = closeCertLightbox;
   window.onclick = function(event) {
-    if (event.target == lightbox) {
-      closeLightbox();
+    if (event.target == certlightbox) {
+      closeCertLightbox();
     }
   };
 
@@ -142,47 +142,6 @@
     });
   });
 <script>
-  const lightbox = document.getElementById("lightbox");
-  const closeBtn = document.querySelector(".close");
-
-  function openCert(certId) {
-    const img = document.getElementById('lightbox-img');
-    const certImages = {
-      tesol: 'images/TESOL.JPG',
-      ielts: 'images/IELTS.JPG'
-    };
-    img.src = certImages[certId];
-    lightbox.style.display = 'block';
-    lightbox.classList.remove("hide");
-    lightbox.classList.add("show");
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove("show");
-    lightbox.classList.add("hide");
-    setTimeout(() => {
-      lightbox.style.display = "none";
-    }, 400); // match fadeOut duration
-  }
-
-  // Close button click
-  closeBtn.onclick = closeLightbox;
-
-  // Close when clicking outside the image
-  window.onclick = function(event) {
-    if (event.target == lightbox) {
-      closeLightbox();
-    }
-  };
-
-  // Disable right-click on cert images
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.cert-image').forEach(img => {
-      img.addEventListener('contextmenu', e => e.preventDefault());
-    });
-  });
-</script>
-
 
     
 </body>
