@@ -5,417 +5,6 @@ body {
   color: #333;
 }
 
-/* FIX: Explicitly enforce flexbox on desktop layout so sidebar stays exactly 250px */
-.container {
-  display: flex !important;
-  flex-direction: row;
-  align-items: stretch;
-  min-height: 100vh;
-  width: 100%;
-}
-
-/* === Mobile Header === */
-.mobile-header {
-  display: none;
-  background-color: #2a4d7a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  width: 100%;          
-  box-sizing: border-box; 
-}
-
-.mobile-header img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-/* === Portfolio Fonts === */
-body.portfolio {
-  font-family: 'Open Sans', sans-serif;
-}
-
-body.portfolio .name,
-body.portfolio h1,
-body.portfolio h2,
-body.portfolio h3 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-body.demo .demo-gallery h2 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 42px;
-  color: #1163ce;   
-  margin-bottom: 10px;
-}
-
-body.demo .demo-gallery p {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 24px;
-  color: #2c9be5;      
-  margin-bottom: 30px;
-}
-
-/* === Sidebar === */
-.container .sidebar {
-  background-color: #2a4d7a;
-  color: #fff;
-  width: 250px !important;
-  max-width: 250px !important;
-  min-width: 250px !important;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-start;   
-  min-height: 100vh;
-  flex-shrink: 0 !important;
-}
-
-.sidebar-content {
-  margin-top: 60px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* FIX: Absolute constraint on the portfolio profile image size */
-.container .sidebar .profile-pic {
-  width: 180px !important;
-  height: 180px !important;
-  max-width: 180px !important;
-  max-height: 180px !important;
-  flex-shrink: 0 !important;
-  object-fit: cover !important;
-  object-position: center;
-  border-radius: 50% !important;
-  display: block !important;
-  margin: 0 auto 20px auto !important;
-  cursor: pointer;
-}
-
-/* Controlled image sizing across standard desktop scaling */
-@media (min-width: 1200px) {
-  .container .sidebar .profile-pic {
-    width: 200px !important;
-    height: 200px !important;
-    max-width: 200px !important;
-    max-height: 200px !important;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container .sidebar .profile-pic {
-    width: 150px !important;
-    height: 150px !important; 
-    max-width: 150px !important;
-    max-height: 150px !important;
-  }
-}
-
-.name {
-  font-size: 22px;
-  margin: 10px 0 4px;
-}
-
-.tagline {
-  font-size: 14px;
-  color: #ddd;
-  margin-top: 4px;
-  margin-bottom: 20px;
-}
-
-.nav-links a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  margin: 10px 0;
-  font-weight: 600;
-}
-
-.nav-links a i {
-  margin-right: 8px;
-}
-
-/* Center text blocks inside sidebar */
-.sidebar .name,
-.sidebar .tagline,
-.sidebar .nav-links {
-  text-align: center;
-  width: 100%; 
-}
-
-/* === Content Area === */
-.content {
-  flex: 1;
-  padding: 40px;
-  box-sizing: border-box;
-}
-
-header h1 {
-  font-size: 28px;
-  color: #2a4d7a;
-}
-
-header h3 {
-  font-size: 16px;
-  color: #555;
-}
-
-/* === Section Headings === */
-.philosophy h2,
-.certifications h2 {
-  color: #2a4d7a;
-  margin-top: 30px;
-}
-
-.philosophy p {
-  margin: 15px 0;
-}
-
-/* === Buttons === */
-.btn {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #2a4d7a;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-/* === Cards === */
-.cards {
-  display: flex;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.card-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.card-button {
-  display: inline-block;
-  padding: 10px 15px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-/* === Accent Colors per Card === */
-.card.demo { border-top: 4px solid #ff6f61; }
-.card.demo .card-icon, .card.demo .card-button { background-color: #ff6f61; }
-.card.demo .card-button:hover { background-color: #e65b50; }
-
-.card.lesson { border-top: 4px solid #008080; }
-.card.lesson .card-icon, .card.lesson .card-button { background-color: #008080; }
-.card.lesson .card-button:hover { background-color: #006666; }
-
-.card.resources { border-top: 4px solid #4CAF50; }
-.card.resources .card-icon, .card.resources .card-button { background-color: #4CAF50; }
-.card.resources .card-button:hover { background-color: #3e8e41; }
-
-/* === Certifications === */
-.cert-row {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.cert-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  flex: 1;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  cursor: pointer;
-}
-
-.cert-card i {
-  font-size: 30px;
-  color: #2a4d7a;
-  margin-bottom: 10px;
-}
-
-/* === Certifications Lightbox === */
-.lightbox {
-  display: none; 
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  text-align: center;
-  opacity: 0;
-  pointer-events: none; 
-  transition: opacity 0.4s ease;
-}
-
-.lightbox.show {
-  display: block !important;
-  opacity: 1;
-  pointer-events: auto; 
-}
-
-.lightbox.hide {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.cert-image {
-  max-width: 90%;
-  max-height: 90%;
-  margin-top: 5%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  pointer-events: none; 
-  user-select: none;    
-}
-
-/* === Demo Gallery === */
-.demo-gallery {
-  text-align: center;
-  margin: 40px auto;
-  max-width: 1200px;
-  padding: 0 20px;
-}
-
-.video-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.video-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  width: calc(33.333% - 14px);
-  box-sizing: border-box;
-}
-
-.video-card.reading { background-color: #63b0e7; }
-.video-card.prepositions { background-color: #b2f6b3; }
-.video-card.contrast { background-color: #eee27a; }
-.video-card.showtell { background-color: #f89dbb; }
-.video-card.speech { background-color: #ae7ff4; }
-.video-card.phonics { background-color: #86e1dd; }
-.video-card.patterns { background-color: #ecb153; }
-.video-card.tech { background-color: #3f8eaf; }
-.video-card.listening { background-color: #f44d4d; }
-.video-card.food { background-color: #da6eed; }
-
-.video-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.video-card img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
-body.demo {
-  background: url('schoolbckgrnd.png') repeat;
-  background-size: 400px;
-  background-color: #faf8f3; 
-  position: relative;
-}
-
-.demo-gallery {
-  position: relative;
-  z-index: 1; 
-}
-
-.demo-gallery::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle, rgba(255, 250, 240, 0.7) 40%, rgba(255, 250, 240, 0) 100%);
-  pointer-events: none;
-  z-index: -1; 
-}
-
-.lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes fadeOut {
-  from { opacity: 1; transform: scale(1); }
-  to { opacity: 0; transform: scale(0.95); }
-}
-
-.lightbox.show .cert-image { animation: fadeIn 0.4s ease forwards; }
-.lightbox.hide .cert-image { animation: fadeOut 0.4s ease forwards; }
-
-/* Mobile Brakepoint Logic */
-@media (max-width: 768px) {
-  .container { flex-direction: column !important; }
-  .container .sidebar { display: none !important; }
-  .mobile-header { display: block !important; }
-  .content, .content h1, .content h2, .content h3, .content p { text-align: center; }
-  .content { padding: 20px; width: 100%; max-width: 600px; margin: 0 auto; }
-  .cards { flex-direction: column; align-items: center; width: 100%; }
-  .card { width: 90%; max-width: 500px; margin: 15px auto; }
-  .cert-row { flex-direction: column; align-items: center; width: 100%; }
-  .cert-card { width: 90%; max-width: 500px; margin: 15px auto; }
-}
-
 :root {
   --navy: #2a4d7a;
   --coral: #ff8a75;
@@ -424,7 +13,7 @@ body.demo {
 }
 
 /* ==========================================================================
-   PHILOSOPHY PAGE RULES (SCOPED IN .PAGE-WRAPPER)
+   PHILOSOPHY PAGE HEADER LAYOUT
    ========================================================================== */
 
 body.philosophy-page {
@@ -444,4 +33,212 @@ body.philosophy-page {
   box-sizing: border-box;
 }
 
-/* FIX: Forces header containers
+/* This creates the side-by-side desktop layout for text and image */
+.page-wrapper .editorial-header {
+  display: flex;
+  align-items: center; /* Aligns them vertically center relative to each other */
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+.page-wrapper .header-left-text {
+  flex: 1; /* Lets the text take up the remaining space */
+}
+
+.page-wrapper .header-right-photo {
+  flex: 0 0 auto; /* Prevents the photo box from stretching */
+  display: flex;
+  align-items: center;
+}
+
+/* White frame container around your picture */
+.page-wrapper .photo-frame {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(42, 77, 122, 0.08);
+  border: 1px solid #ebdcd0;
+  display: inline-block;
+}
+
+/* FIX: Locks photo height to match the text profile cleanly without being huge */
+.page-wrapper .narrative-pic {
+  height: 180px !important; /* Adjust this value if you want it slightly taller or shorter */
+  width: auto !important;   
+  display: block;
+  object-fit: contain;
+  border-radius: 0 !important;
+}
+
+/* Typography elements */
+.page-wrapper .main-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  color: var(--navy);
+  margin: 0;
+}
+
+.page-wrapper .cursive-subtitle {
+  font-family: 'Allura', cursive;
+  font-size: 48px;
+  color: var(--coral);
+  margin: -10px 0 10px 0;
+}
+
+.page-wrapper .header-divider {
+  border: 0;
+  height: 2px;
+  background-color: var(--coral);
+  width: 100px;
+  margin: 0 0 20px 0;
+}
+
+.page-wrapper .header-lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* ==========================================================================
+   REST OF BODY & GRID SECTIONS
+   ========================================================================== */
+
+.page-wrapper .bio-grid {
+  display: flex;
+  gap: 50px;
+}
+
+.page-wrapper .bio-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-wrapper .quote-box {
+  background-color: #fdf7f2;
+  border-radius: 8px;
+  padding: 25px 35px;
+  border: 1px solid #f5e6dc;
+  text-align: center;
+}
+
+.page-wrapper .quote-content {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--navy);
+  font-weight: 600;
+  margin: 0;
+}
+
+.page-wrapper .callout-banner {
+  background-color: #f3f0e7;
+  padding: 20px 30px;
+  border-radius: 4px;
+  border-left: 4px solid var(--coral);
+}
+
+.page-wrapper .callout-text {
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0;
+}
+
+.page-wrapper .story-split {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.page-wrapper .story-left-graphic {
+  flex: 0 0 320px;
+  text-align: center;
+}
+
+.page-wrapper .story-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-wrapper .story-right-text {
+  flex: 1;
+}
+
+.page-wrapper .border-quote {
+  border-left: 2px solid var(--coral);
+  padding-left: 25px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.page-wrapper .techniques-grid {
+  display: flex;
+  gap: 35px;
+}
+
+.page-wrapper .narrative-card {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.page-wrapper .card-heading {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.page-wrapper .card-inner-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.page-wrapper .inner-list-box {
+  flex: 0 0 240px;
+  background-color: #fcf8f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.page-wrapper .inner-text-box {
+  flex: 1;
+}
+
+.page-wrapper .techniques-list {
+  list-style: none;
+  padding: 0;
+}
+
+.page-wrapper .techniques-list li {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 900px) {
+  .page-wrapper .editorial-header, 
+  .page-wrapper .bio-grid, 
+  .page-wrapper .story-split, 
+  .page-wrapper .techniques-grid,
+  .page-wrapper .card-inner-layout {
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .page-wrapper .header-right-photo {
+    margin: 0 auto;
+  }
+  
+  .page-wrapper .narrative-pic {
+    height: auto !important;
+    max-width: 250px !important;
+  }
+}
