@@ -316,42 +316,9 @@ body.philosophy-page {
     gap: 20px;
   }
   .
-  /* Shrink the photo frame itself */
+/* Make photo ~60% smaller and add blurred edges */
 .header-left {
-  flex: 0 0 130px;   /* half of the original 260px */
-}
-
-.narrative-pic {
-  width: 100%;       /* fill the smaller frame */
-  height: auto;
-  display: block;
-}
-
-/* Shrink photo so it's balanced with text */
-.header-left {
-  flex: 0 0 180px;   /* smaller width, closer to text size */
-}
-
-.narrative-pic {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-
-  /* Blurred edges effect */
-  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: cover;
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: cover;
-}
-
-  /* Make photo smaller and add blurred edges */
-.header-left {
-  flex: 0 0 120px;   /* reduce width even more */
+  flex: 0 0 100px;   /* reduced from 260px → about 60% smaller */
 }
 
 .narrative-pic {
@@ -361,32 +328,11 @@ body.philosophy-page {
   object-fit: cover;
 
   /* blurred/faded edges */
-  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: cover;
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: cover;
-}
-/* Make photo much smaller and add blurred edges */
-.header-left {
-  flex: 0 0 90px;   /* very narrow frame, about 1/3 of original */
-}
-
-.narrative-pic {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-
-  /* blurred/faded edges */
-  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: cover;
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: cover;
