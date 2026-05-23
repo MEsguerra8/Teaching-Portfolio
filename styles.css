@@ -731,11 +731,13 @@ body.philosophy-page {
 }
 
 .cursive-subtitle {
-  font-family: 'Great Vibes', cursive;
-  font-size: 72px;
+  font-family: 'Allura', cursive;
+  font-size: 76px;
   color: var(--coral);
-  margin: -5px 0 10px 0;
+  font-weight: 400;          /* Keeps the font lines delicate and thin */
+  margin: -10px 0 15px 0;
   line-height: 1;
+  letter-spacing: 1px;       /* Adds a touch of extra airiness to the flow */
 }
 
 .header-divider {
