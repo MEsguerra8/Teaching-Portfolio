@@ -448,7 +448,7 @@ body.demo {
 }
 
 /* Enlarged image */
-.lightbox-content {
+.cert-image {
   margin: auto;
   display: block;
   max-width: 90%;
@@ -479,12 +479,12 @@ body.demo {
 }
 
 /* Apply fade-in by default */
-.lightbox.show .lightbox-content {
+.lightbox.show .cert-image {
   animation: fadeIn 0.4s ease forwards;
 }
 
 /* Apply fade-out when closing */
-.lightbox.hide .lightbox-content {
+.lightbox.hide .cert-image {
   animation: fadeOut 0.4s ease forwards;
 }
 @media (max-width: 768px) {
