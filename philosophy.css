@@ -316,9 +316,9 @@ body.philosophy-page {
     gap: 20px;
   }
   .
-/* Make photo ~60% smaller and add blurred edges */
+/* Make photo much smaller and add blurred edges */
 .header-left {
-  flex: 0 0 100px;   /* reduced from 260px → about 60% smaller */
+  flex: 0 0 80px;   /* shrinks the frame from 260px → 80px (about 70% smaller) */
 }
 
 .narrative-pic {
@@ -328,11 +328,11 @@ body.philosophy-page {
   object-fit: cover;
 
   /* blurred/faded edges */
-  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: cover;
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: cover;
