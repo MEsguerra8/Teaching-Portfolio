@@ -108,43 +108,44 @@
 
   <script>
     const certlightbox = document.getElementById("cert-lightbox");
-    const closeBtn = document.querySelector("#cert-lightbox .close");
-    const certImg = document.getElementById('cert-img'); // Added this to find the target image tag
+  const closeBtn = document.querySelector("#cert-lightbox .close");
+  const certImg = document.getElementById('cert-img'); // <-- Crucial: Finds the image element
 
-    function openCert(certId) {
-      const certImages = {
-        tesol: 'images/TESOL.jpg',  
-        ielts: 'images/IELTS.jpg'   
-      };
-      
-      certImg.src = certImages[certId]; // Uses the correct variable name
-      certlightbox.style.display = 'block'; // Uses the correct variable name
-      certlightbox.classList.remove("hide");
-      certlightbox.classList.add("show");
-    }
-
-    function closeLightbox() {
-      certlightbox.classList.remove("show");
-      certlightbox.classList.add("hide");
-      setTimeout(() => {
-        certlightbox.style.display = "none";
-      }, 400); // match fadeOut duration
-    }
-
-    closeBtn.onclick = closeLightbox; // Linked to your valid variable and function names
-
-    window.onclick = function(event) {
-      if (event.target == certlightbox) {
-        closeLightbox();
-      }
+  function openCert(certId) {
+    // 1. Force lowercase extensions to match typical image saves (.jpg)
+    const certImages = {
+      tesol: 'images/TESOL.jpg',  
+      ielts: 'images/IELTS.jpg'   
     };
+    
+    certImg.src = certImages[certId]; 
+    certlightbox.style.display = 'block'; 
+    certlightbox.classList.remove("hide");
+    certlightbox.classList.add("show");
+  }
 
-    // Disable right-click on cert images
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.cert-image').forEach(img => {
-        img.addEventListener('contextmenu', e => e.preventDefault());
-      });
+  function closeLightbox() {
+    certlightbox.classList.remove("show");
+    certlightbox.classList.add("hide");
+    setTimeout(() => {
+      certlightbox.style.display = "none";
+    }, 400); 
+  }
+
+  closeBtn.onclick = closeLightbox; // <-- Fixed target mismatched names
+
+  window.onclick = function(event) {
+    if (event.target == certlightbox) {
+      closeLightbox();
+    }
+  };
+
+  // Disable right-click on cert images
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.cert-image').forEach(img => {
+      img.addEventListener('contextmenu', e => e.preventDefault());
     });
+  });
   </script>
 </body>
 </html>
