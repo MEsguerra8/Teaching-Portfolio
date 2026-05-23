@@ -327,3 +327,24 @@ body.philosophy-page {
   display: block;
 }
 
+/* Shrink photo so it's balanced with text */
+.header-left {
+  flex: 0 0 180px;   /* smaller width, closer to text size */
+}
+
+.narrative-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+
+  /* Blurred edges effect */
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
