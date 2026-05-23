@@ -84,6 +84,13 @@ body.demo .demo-gallery p {
   margin-bottom: 20px;
   cursor: pointer;
 }
+.philosophy-pic {
+  width: 240px;
+  height: auto;          /* natural proportions */
+  border-radius: 12px;   /* softer rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+}
 
 /* Responsive scaling for profile photo */
 @media (min-width: 1200px) {
