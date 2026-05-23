@@ -87,18 +87,21 @@ body.demo .demo-gallery p {
 @media (min-width: 1200px) {
   .profile-pic {
     width: 220px; /* larger on wide desktop */
+    height: 220px;
   }
 }
 
 @media (max-width: 1024px) {
   .profile-pic {
     width: 160px; /* smaller on tablets */
+    height: 160px;
   }
 }
 
 @media (max-width: 768px) {
   .profile-pic {
     width: 140px; /* smaller on phones */
+    height: 140px;
   }
   .mobile-header {
     display: block;   /* show only on mobile */
