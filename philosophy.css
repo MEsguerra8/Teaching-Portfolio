@@ -409,10 +409,11 @@ body.philosophy-page {
 
 .header-divider {
   border: none;
-  height: 3px;                 /* thickness of the bar */
-  background-color: coral;     /* coral color */
-  width: 100%;                 /* span full width of text block */
-  margin: 10px auto;           /* center it with auto margins */
+  height: 3px;
+  background-color: coral;
+  width: fit-content;   /* only as wide as the text */
+  margin: 10px auto;
 }
+
 
 
