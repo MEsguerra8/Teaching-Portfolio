@@ -85,16 +85,16 @@ body.demo .demo-gallery p {
   cursor: pointer;
 }
 .philosophy-pic {
+  float: left;            /* Pushes the photo to the left side of the text */
   width: 240px;
-  height: auto;          /* natural proportions */
-  border-radius: 12px;   /* softer rounded corners */
+  height: auto;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  margin-bottom: 20px;
+  margin-right: 30px;     /* Creates breathing room between the photo and the text */
+  margin-bottom: 20px;    /* Creates breathing room below the photo */
 }
 .philosophy-header {
-  display: flex;          /* photo + title side by side */
-  align-items: center;    /* vertical alignment */
-  gap: 20px;              /* spacing between them */
+  display: block;          /* photo + title side by side */
   margin-bottom: 30px;
 }
 
@@ -122,6 +122,11 @@ body.demo .demo-gallery p {
   .profile-pic {
     width: 140px;
     height: 140px;
+  }
+  .philosophy-pic {
+    float: none;          /* Removes the side-by-side float on mobile */
+    margin: 0 auto 20px;  /* Centers the photo above the text */
+    display: block;
   }
 }
 
