@@ -1085,4 +1085,24 @@ blockquote {
   display: inline-block;
   margin-top: 20px;
 }
+.editorial-header .header-right {
+  text-align: center;   /* centers all text inside the right block */
+}
+
+.main-title {
+  text-align: center;   /* centers the "Coming Home to" line */
+}
+
+.cursive-subtitle {
+  text-align: center;   /* centers the "Teaching" line */
+}
+
+.header-lead {
+  text-align: center;   /* centers the subtitle sentence */
+  display: inline-block;
+  background: linear-gradient(to right, #fffaf5, #fdf2ef); /* ivory-peach highlight */
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
