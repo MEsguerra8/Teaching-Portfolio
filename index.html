@@ -83,39 +83,43 @@
      <!-- Certifications -->
 <section class="certifications">
   <h2>Certifications & Credentials</h2>
-  <div class="cert-card" onclick="openCert('tesol')">
-  <i class="fas fa-certificate"></i>
-  <p><strong>TESOL Certificate</strong><br>Arizona State University</p>
-</div>
+  <div class="cert-row">
+    <!-- TESOL Card -->
+    <div class="cert-card" onclick="openCert('tesol')">
+      <i class="fas fa-certificate"></i>
+      <p><strong>TESOL Certificate</strong><br>Arizona State University</p>
+    </div>
 
-<div class="cert-card" onclick="openCert('ielts')">
-  <i class="fas fa-globe"></i>
-  <p><strong>IELTS Academic</strong><br>Band 8 Score</p>
-</div>
-
+    <!-- IELTS Card -->
+    <div class="cert-card" onclick="openCert('ielts')">
+      <i class="fas fa-globe"></i>
+      <p><strong>IELTS Academic</strong><br>Band 8 Score</p>
+    </div>
+  </div>
 </section>
 
-<!-- Lightbox Overlay (shared for all certs) -->
+<!-- Lightbox Overlay -->
 <div id="lightbox" class="lightbox">
-  <span class="close" onclick="closeCert()">&times;</span>
+  <span class="close">&times;</span>
   <img id="lightbox-img" class="cert-image" src="" alt="Certificate">
 </div>
 
- <script>
-  const profilePic = document.getElementById("profilePic");
+<script>
   const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightboxImg");
-  const closeBtn = document.querySelector(".lightbox .close");
+  const closeBtn = document.querySelector(".close");
 
-  // Show lightbox
-  profilePic.onclick = function() {
-    lightbox.style.display = "block";
+  function openCert(certId) {
+    const img = document.getElementById('lightbox-img');
+    const certImages = {
+      tesol: 'images/TESOL.JPG',
+      ielts: 'images/IELTS.JPG'
+    };
+    img.src = certImages[certId];
+    lightbox.style.display = 'block';
     lightbox.classList.remove("hide");
     lightbox.classList.add("show");
-    lightboxImg.src = this.src;
   }
 
-  // Close lightbox with fade-out
   function closeLightbox() {
     lightbox.classList.remove("show");
     lightbox.classList.add("hide");
@@ -125,36 +129,20 @@
   }
 
   closeBtn.onclick = closeLightbox;
-
   window.onclick = function(event) {
     if (event.target == lightbox) {
       closeLightbox();
     }
-  }
-</script>
-function openCert(certId) {
-  const lightbox = document.getElementById('lightbox');
-  const img = document.getElementById('lightbox-img');
-
-  const certImages = {
-    tesol: 'images/TESOL.JPG',
-    ielts: 'images/IELTS.JPG'
   };
 
-  img.src = certImages[certId];
-  lightbox.style.display = 'block';
-}
-
-function closeCert() {
-  document.getElementById('lightbox').style.display = 'none';
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.cert-image').forEach(img => {
-    img.addEventListener('contextmenu', e => e.preventDefault());
+  // Disable right-click on cert images
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.cert-image').forEach(img => {
+      img.addEventListener('contextmenu', e => e.preventDefault());
+    });
   });
-});
 </script>
+
     
 </body>
 </html>
