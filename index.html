@@ -80,7 +80,7 @@
 </section>
 
 
-     <!-- Certifications -->
+    <!-- Certifications -->
 <section class="certifications">
   <h2>Certifications & Credentials</h2>
   <div class="cert-row">
@@ -98,7 +98,7 @@
   </div>
 </section>
 
-<!-- Lightbox Overlay -->
+<!-- Certifications Lightbox Overlay -->
 <div id="lightbox" class="lightbox">
   <span class="close">&times;</span>
   <img id="lightbox-img" class="cert-image" src="" alt="Certificate">
@@ -141,7 +141,48 @@
       img.addEventListener('contextmenu', e => e.preventDefault());
     });
   });
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const closeBtn = document.querySelector(".close");
+
+  function openCert(certId) {
+    const img = document.getElementById('lightbox-img');
+    const certImages = {
+      tesol: 'images/TESOL.JPG',
+      ielts: 'images/IELTS.JPG'
+    };
+    img.src = certImages[certId];
+    lightbox.style.display = 'block';
+    lightbox.classList.remove("hide");
+    lightbox.classList.add("show");
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("show");
+    lightbox.classList.add("hide");
+    setTimeout(() => {
+      lightbox.style.display = "none";
+    }, 400); // match fadeOut duration
+  }
+
+  // Close button click
+  closeBtn.onclick = closeLightbox;
+
+  // Close when clicking outside the image
+  window.onclick = function(event) {
+    if (event.target == lightbox) {
+      closeLightbox();
+    }
+  };
+
+  // Disable right-click on cert images
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.cert-image').forEach(img => {
+      img.addEventListener('contextmenu', e => e.preventDefault());
+    });
+  });
 </script>
+
 
     
 </body>
