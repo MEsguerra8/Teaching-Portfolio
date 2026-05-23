@@ -74,12 +74,12 @@ body.demo .demo-gallery p {
   margin-top: 60px;
 }
 .profile-pic {
-  width: 180px !important;
-  height: 180px !important;
-  flex-shrink: 0;            /* Stops the sidebar from squishing it */
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
   object-fit: cover;
   object-position: center;
-  border-radius: 50%;        /* Keeps it a perfect circle */
+  border-radius: 50%;
   display: block;
   margin-bottom: 20px;
   cursor: pointer;
@@ -88,27 +88,19 @@ body.demo .demo-gallery p {
 /* Responsive scaling for profile photo */
 @media (min-width: 1200px) {
   .profile-pic {
-    width: 220px; /* larger on wide desktop */
-    height: 220px;
+    width: 220px;
   }
 }
 
 @media (max-width: 1024px) {
   .profile-pic {
-    width: 160px; /* smaller on tablets */
-    height: 160px;
+    width: 160px;
   }
 }
 
 @media (max-width: 768px) {
   .profile-pic {
-    width: 140px; /* smaller on phones */
-    height: 140px;
-  }
-  .mobile-header {
-    display: block;   /* show only on mobile */
-    width: 100%;      /* span full width */
-    box-sizing: border-box;
+    width: 140px;
   }
 }
 
