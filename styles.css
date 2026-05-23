@@ -445,9 +445,10 @@ body.demo {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.8);
+  text-align: center;
 }
 
-/* Enlarged image */
+/* Enlarged certificate image */
 .cert-image {
   margin: auto;
   display: block;
@@ -455,6 +456,8 @@ body.demo {
   max-height: 90%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  pointer-events: none; /* disables drag */
+  user-select: none;    /* disables text/image selection */
 }
 
 /* Close button */
@@ -467,6 +470,7 @@ body.demo {
   font-weight: bold;
   cursor: pointer;
 }
+
 /* Fade-in and fade-out animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
@@ -487,6 +491,7 @@ body.demo {
 .lightbox.hide .cert-image {
   animation: fadeOut 0.4s ease forwards;
 }
+
 @media (max-width: 768px) {
   .sidebar {
     display: none; /* hide sidebar on mobile */
