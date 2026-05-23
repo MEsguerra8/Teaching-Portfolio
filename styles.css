@@ -84,24 +84,6 @@ body.demo .demo-gallery p {
   margin-bottom: 20px;
   cursor: pointer;
 }
-.philosophy-pic {
-  float: left;            /* Pushes the photo to the left side of the text */
-  width: 240px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  margin-right: 30px;     /* Creates breathing room between the photo and the text */
-  margin-bottom: 15px;    /* Creates breathing room below the photo */
-}
-.philosophy-header {
-  display: block;          /* photo + title side by side */
-  margin-bottom: 20px;
-}
-
-.philosophy-header h1 {
-  font-size: 28px;
-  color: #2a4d7a;
-}
 
 /* Responsive scaling for profile photo */
 @media (min-width: 1200px) {
@@ -994,3 +976,113 @@ body.philosophy-page {
     text-align: left;
   }
 }
+:root {
+  --navy: #2a4d7a;
+  --coral: #ff8a75;
+  --ivory: #faf8f3;
+  --light-blue: #f5f7fa;
+}
+
+/* Header */
+.philosophy-header {
+  display: flex;
+  justify-content: center;   /* centers text block */
+  align-items: center;       /* aligns photo + text vertically */
+  gap: 30px;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, var(--ivory), var(--light-blue));
+  border-bottom: 4px solid var(--coral);
+  padding: 20px;
+}
+
+.philosophy-header div {
+  text-align: center;        /* centers title + subtitle */
+  flex: 1;
+}
+
+.philosophy-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  margin: 0;
+  color: var(--navy);
+}
+
+.navy { color: var(--navy); }
+.coral-script {
+  color: var(--coral);
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Subtitle with ivory-peach highlight */
+.philosophy-header .subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-top: 8px;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 6px;
+  background: linear-gradient(to right, #fffaf5, #fdf2ef); /* ivory-peach gradient */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Photo on right */
+.philosophy-pic {
+  order: 2;
+  max-width: 200px;
+  border-radius: 6px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .philosophy-header {
+    flex-direction: column;  /* stack vertically */
+  }
+  .philosophy-pic {
+    order: 0;                /* photo below text */
+    margin-top: 20px;
+  }
+}
+
+/* Section headings */
+.philosophy-text h2 {
+  color: var(--navy);
+  border-left: 4px solid var(--coral);
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+/* Quotes with ivory-peach highlight */
+blockquote {
+  font-style: italic;
+  color: var(--navy);
+  background: linear-gradient(to right, #fffaf5, #fdf2ef);
+  border-left: 4px solid var(--coral);
+  padding: 15px;
+  margin: 25px 0;
+  border-radius: 6px;
+}
+
+/* Columns */
+.philosophy-columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.column h2 {
+  color: var(--navy);
+  border-left: 4px solid var(--coral);
+  padding-left: 10px;
+}
+
+/* Button */
+.btn {
+  background-color: var(--coral);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
