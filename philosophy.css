@@ -88,10 +88,15 @@ body.philosophy-page {
 
 .page-wrapper .header-divider {
   border: 0;
-  height: 2px;
+  height: 3px;
   background-color: var(--coral);
-  width: 100px;
-  margin: 0 0 20px 0;
+
+  width: 100%;
+  max-width: 500px;
+
+  margin: 18px auto 20px auto;
+
+  border-radius: 999px;
 }
 
 .page-wrapper .header-lead {
