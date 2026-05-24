@@ -26,7 +26,7 @@ body.philosophy-page {
 
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 20px;
 }
 
 /* =========================
@@ -177,7 +177,7 @@ body.philosophy-page {
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
-  margin: -30px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
