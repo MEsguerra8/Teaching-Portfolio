@@ -112,22 +112,38 @@ body.philosophy-page {
 .border-quote,
 .small-quote p,
 .quote-box p {
-  font-family: 'Playfair Display', serif;
-
-  font-size: 18px;
-  line-height: 1.6;
-
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;        /* bigger — Cormorant reads small */
+  line-height: 1.7;
   font-style: italic;
   font-weight: 400;
-
   color: #6b5b53;
-
-  max-width: 600px;
+  max-width: 580px;
   margin: 25px auto;
-
   text-align: center;
 }
 
+.page-wrapper .quote-box {
+  background-color: #fdf7f2;
+  border: 1px solid #ebdcd0;
+  border-radius: 8px;
+  padding: 30px 40px;
+  text-align: center;
+  position: relative;
+}
+
+/* decorative large quotation mark */
+.page-wrapper .quote-box::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  color: var(--coral);
+  opacity: 0.3;
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  line-height: 1;
+}
 /* =========================
    BIO GRID
 ========================= */
