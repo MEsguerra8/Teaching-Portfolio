@@ -10,6 +10,7 @@ body {
   --coral: #ff8a75;
   --ivory: #faf8f3;
   --light-blue: #f5f7fa;
+  --gray:#333
 }
 
 /* ==========================================================================
@@ -29,8 +30,7 @@ body.philosophy-page {
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
-  gap: 70px; 
-  box-sizing: border-box;
+  gap: 60px; 
 }
 
 /* This creates the side-by-side desktop layout for text and image */
@@ -38,40 +38,21 @@ body.philosophy-page {
   display: flex;
   align-items: center; /* Aligns them vertically center relative to each other */
   justify-content: space-between;
-  gap: 50px;
-  width: 100%;
+  
+  gap: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+
+  border-bottom: 2px solid #ebdcd0;
 }
 
 .page-wrapper .header-left-text {
-  flex: 1; /* Lets the text take up the remaining space */
-}
-
-.page-wrapper .header-right-photo {
-  flex: 0 0 auto; /* Prevents the photo box from stretching */
+  flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  text-align: left;
 }
 
-/* White frame container around your picture */
-.page-wrapper .photo-frame {
-  background: #ffffff;
-  padding: 12px;
-  border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(42, 77, 122, 0.08);
-  border: 1px solid #ebdcd0;
-  display: inline-block;
-}
-
-/* FIX: Locks photo height to match the text profile cleanly without being huge */
-.page-wrapper .narrative-pic {
-  height: 180px !important; /* Adjust this value if you want it slightly taller or shorter */
-  width: auto !important;   
-  display: block;
-  object-fit: contain;
-  border-radius: 0 !important;
-}
-
-/* Typography elements */
 .page-wrapper .main-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
@@ -83,34 +64,71 @@ body.philosophy-page {
   font-family: 'Allura', cursive;
   font-size: 52px;
   color: var(--coral);
-  margin: -10px 0 10px 0;
-}
-
-.page-wrapper .header-divider {
-  display: block;
-  width: 80%;
-  max-width: 500px;
-
-  height: 3px;
-  border: none;
-  background-color: var(--coral);
-
-  margin-left: auto;
-  margin-right: auto;
-
-  border-radius: 999px;
-}
-
-.page-wrapper .header-lead {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #555;
   margin: 0;
 }
 
-/* ==========================================================================
-   REST OF BODY & GRID SECTIONS
-   ========================================================================== */
+.page-wrapper .header-divider {
+  width: 120px;
+  height: 3px;
+  background: var(--coral);
+  border: none;
+  margin: 10px 0;
+}
+
+/* HERO QUOTE (HEADER) */
+.hero-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #6b5b53;
+
+  max-width: 550px;
+  margin-top: 15px;
+}
+
+/* RIGHT IMAGE */
+.page-wrapper .header-right-photo {
+  flex: 0 0 auto;
+}
+
+.page-wrapper .narrative-pic {
+  height: 220px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+
+/* =========================
+   QUOTES (ALL SECTIONS)
+========================= */
+
+.quote-content,
+.border-quote,
+.small-quote p,
+.quote-box p {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  font-style: italic;
+  font-weight: 400;
+
+  color: #6b5b53;
+
+  max-width: 600px;
+  margin: 25px auto;
+
+  text-align: center;
+}
+
+/* =========================
+   BIO GRID
+========================= */
 
 .page-wrapper .bio-grid {
   display: flex;
@@ -124,237 +142,79 @@ body.philosophy-page {
   gap: 20px;
 }
 
+/* Quote box styling */
 .page-wrapper .quote-box {
   background-color: #fdf7f2;
-  border-radius: 8px;
-  padding: 25px 35px;
   border: 1px solid #f5e6dc;
+  border-radius: 8px;
+
+  padding: 25px;
   text-align: center;
 }
 
-.page-wrapper .quote-content {
-  font-style: italic;
-  font-size: 18px;
-  color: var(--navy);
-  font-weight: 600;
-  margin: 0;
-}
-
-.page-wrapper .callout-banner {
-  background-color: #f3f0e7;
-  padding: 20px 30px;
-  border-radius: 4px;
-  border-left: 4px solid var(--coral);
-}
-
-.page-wrapper .callout-text {
-  font-weight: 600;
-  color: var(--navy);
-  margin: 0;
-}
+/* =========================
+   STORY SECTION
+========================= */
 
 .page-wrapper .story-split {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
 }
 
 .page-wrapper .story-left-graphic {
-  flex: 0 0 320px;
-  text-align: center;
+  flex: 0 0 300px;
 }
 
 .page-wrapper .story-img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
-.page-wrapper .story-right-text {
-  flex: 1;
+.page-wrapper .border-quote {
+  border-left: 3px solid var(--coral);
+  padding-left: 20px;
+  margin-top: 20px;
 }
 
-.page-wrapper .border-quote {
-  border-left: 2px solid var(--coral);
-  padding-left: 25px;
-  margin: 30px 0;
-  font-style: italic;
-  color: #555;
-}
+/* =========================
+   CARDS SECTION
+========================= */
 
 .page-wrapper .techniques-grid {
   display: flex;
-  gap: 35px;
+  gap: 30px;
 }
 
 .page-wrapper .narrative-card {
   flex: 1;
-  background: #fff;
+  background: white;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 10px;
+
+  padding: 25px;
 }
 
-.page-wrapper .card-heading {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--navy);
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.page-wrapper .card-inner-layout {
-  display: flex;
-  gap: 30px;
-  margin-top: 25px;
-}
-
-.page-wrapper .inner-list-box {
-  flex: 0 0 240px;
-  background-color: #fcf8f2;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.page-wrapper .inner-text-box {
-  flex: 1;
-}
-
-.page-wrapper .techniques-list {
-  list-style: none;
-  padding: 0;
-}
-
-.page-wrapper .techniques-list li {
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-
-/* Mobile Breakpoints */
-@media (max-width: 900px) {
-  .page-wrapper .editorial-header, 
-  .page-wrapper .bio-grid, 
-  .page-wrapper .story-split, 
-  .page-wrapper .techniques-grid,
-  .page-wrapper .card-inner-layout {
-    flex-direction: column;
-    gap: 35px;
-  }
-  
-  .page-wrapper .header-right-photo {
-    margin: 0 auto;
-  }
-  
-  .page-wrapper .narrative-pic {
-    height: auto !important;
-    max-width: 250px !important;
-  }
-}
-/* ===== FINAL HEADER LAYOUT ===== */
-
-.page-wrapper .editorial-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 20px;
-
-  margin-bottom: 40px;
-  border-bottom: 2px solid #ebdcd0;
-  padding-bottom: 30px;
-}
-
-.page-wrapper .header-left-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-.page-wrapper .header-right-photo {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-.page-wrapper .narrative-pic {
-  height: 220px;
-  width: auto;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-  -webkit-mask-image: radial-gradient(
-    circle,
-    rgba(0,0,0,1) 70%,
-    rgba(0,0,0,0) 100%
-  );
-
-  mask-image: radial-gradient(
-    circle,
-    rgba(0,0,0,1) 70%,
-    rgba(0,0,0,0) 100%
-  );
-}
-
-.header-divider {
-  border: none;
-  height: 3px;
-  background-color: coral;
-
-  width: 100%;
-  max-width: 500px;
-
-  margin: 18px auto;
-  border-radius: 999px;
-}
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
-  .editorial-header {
+
+  .page-wrapper .editorial-header,
+  .page-wrapper .bio-grid,
+  .page-wrapper .story-split,
+  .page-wrapper .techniques-grid {
     flex-direction: column;
+  }
+
+  .page-wrapper .narrative-pic {
+    height: auto;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .hero-quote {
     text-align: center;
   }
-
-  .header-right-photo {
-    margin-top: 15px;
-  }
-
-  .narrative-pic {
-    width: 50%;
-    max-width: 200px;
-  }
-}
-
-.hero-quote {
-  font-family: 'Lora', serif;
-  font-size: 30px;
-  line-height: 1.5;
-
-  text-align: center;
-  color: var(--navy);
-
-  max-width: 650px;
-  margin: 60px auto;
-
-  font-style: italic;
-}
-
-.hero-quote,
-.quote-content,
-.border-quote,
-.small-quote p {
-  font-family: 'Playfair Display', serif;
-
-  font-size: 18px;     /* smaller and more natural */
-  line-height: 1.6;
-
-  font-style: italic;
-
-  color: #6b5b53;      /* warm neutral (keep this) */
-
-  max-width: 600px;
-  margin: 35px auto;
-
-  text-align: center;
-
-  font-weight: 400;
 }
