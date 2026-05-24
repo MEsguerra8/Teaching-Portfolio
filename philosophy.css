@@ -35,18 +35,16 @@ body.philosophy-page {
 
 .page-wrapper .editorial-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;   /* ← change this */
   align-items: center;
-
-  gap: 30px;
+  gap: 60px;                 /* ← controls space between text and photo */
   padding-bottom: 30px;
   margin-bottom: 20px;
-
   border-bottom: 2px solid #ebdcd0;
 }
 
 .page-wrapper .header-left-text {
-  flex: 1;
+  flex: 0 1 480px;   /* was flex: 1 — this was making it expand */
   display: flex;
   flex-direction: column;
   text-align: left;
