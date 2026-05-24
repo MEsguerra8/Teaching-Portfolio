@@ -44,7 +44,7 @@ body.philosophy-page {
   border-bottom: 2px solid #ebdcd0;
   max-width: 700px;        /* ← add this */
   margin-left: auto;       /* ← add this */
-  margin-right: auto;      /* ← add this *
+  margin-right: auto;      /* ← add this */
 }
 
 .page-wrapper .header-left-text {
