@@ -5,40 +5,39 @@ body {
   color: #333;
 }
 
+/* Colors */
 :root {
   --navy: #2a4d7a;
   --coral: #ff8a75;
   --ivory: #faf8f3;
-  --light-blue: #f5f7fa;
-  --gray:#333
 }
 
-/* ==========================================================================
-   PHILOSOPHY PAGE HEADER LAYOUT
-   ========================================================================== */
-
+/* === Page Setup === */
 body.philosophy-page {
-  background-color: #faf8f3 !important;
+  background-color: #faf8f3;
   font-family: 'Lora', serif;
-  color: #333;
-  padding: 0;
 }
 
+/* === Layout Wrapper === */
 .page-wrapper {
   max-width: 1140px;
   margin: 0 auto;
   padding: 60px 20px;
+
   display: flex;
   flex-direction: column;
-  gap: 60px; 
+  gap: 60px;
 }
 
-/* This creates the side-by-side desktop layout for text and image */
+/* =========================
+   HEADER (CLEAN LAYOUT)
+========================= */
+
 .page-wrapper .editorial-header {
   display: flex;
-  align-items: center; /* Aligns them vertically center relative to each other */
   justify-content: space-between;
-  
+  align-items: center;
+
   gap: 30px;
   padding-bottom: 30px;
   margin-bottom: 20px;
