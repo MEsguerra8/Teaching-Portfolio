@@ -154,28 +154,22 @@ body.philosophy-page {
 }
 
 /* =========================
-   STORY SECTION
+   BIO NARRATIVE (SINGLE COLUMN)
 ========================= */
-
-.page-wrapper .story-split {
+.page-wrapper .bio-narrative {
+  max-width: 720px;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  gap: 50px;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.page-wrapper .story-left-graphic {
-  flex: 0 0 300px;
-}
-
-.page-wrapper .story-img {
-  width: 100%;
-  height: auto;
-}
-
-.page-wrapper .border-quote {
-  border-left: 3px solid var(--coral);
-  padding-left: 20px;
-  margin-top: 20px;
+.section-ornament {
+  width: 40px;
+  height: 3px;
+  background: var(--coral);
+  margin: 10px auto;
+  border-radius: 2px;
 }
 
 /* =========================
