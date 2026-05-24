@@ -194,7 +194,21 @@ body.philosophy-page {
 
   padding: 25px;
 }
+.bio-intro-drop::first-letter {
+  font-family: 'Allura', cursive;
+  font-size: 72px;
+  color: var(--coral);
+  float: left;
+  line-height: 0.8;
+  margin-right: 8px;
+  margin-top: 8px;
+}
 
+.bio-intro-first-sentence {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+}
 /* =========================
    MOBILE
 ========================= */
