@@ -113,7 +113,7 @@ body.philosophy-page {
 .small-quote p,
 .quote-box p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;        /* bigger — Cormorant reads small */
+  font-size: 17px;        /* bigger — Cormorant reads small */
   line-height: 1.7;
   font-style: italic;
   font-weight: 400;
