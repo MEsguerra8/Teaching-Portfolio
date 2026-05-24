@@ -251,10 +251,10 @@ body.philosophy-page {
 }
 /* ===== FINAL HEADER LAYOUT ===== */
 
-.editorial-header {
+.page-wrapper .editorial-header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
   gap: 20px;
 
   margin-bottom: 40px;
@@ -262,19 +262,26 @@ body.philosophy-page {
   padding-bottom: 30px;
 }
 
-.header-left-text {
+.page-wrapper .header-left-text {
   flex: 1;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
-.header-right-photo {
+.page-wrapper .header-right-photo {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
-.narrative-pic {
-  width: 100px;
-  height: auto;
+.page-wrapper .narrative-pic {
+  height: 220px;
+  width: auto;
   object-fit: cover;
+  border-radius: 6px;
+}
 
   -webkit-mask-image: radial-gradient(
     circle,
