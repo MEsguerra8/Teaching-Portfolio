@@ -74,27 +74,29 @@ body.philosophy-page {
 /* Typography elements */
 .page-wrapper .main-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 32px;
+  font-size: 40px;
   color: var(--navy);
   margin: 0;
 }
 
 .page-wrapper .cursive-subtitle {
   font-family: 'Allura', cursive;
-  font-size: 48px;
+  font-size: 52px;
   color: var(--coral);
   margin: -10px 0 10px 0;
 }
 
 .page-wrapper .header-divider {
-  border: 0;
-  height: 3px;
-  background-color: var(--coral);
-
-  width: 100%;
+  display: block;
+  width: 80%;
   max-width: 500px;
 
-  margin: 18px auto 20px auto;
+  height: 3px;
+  border: none;
+  background-color: var(--coral);
+
+  margin-left: auto;
+  margin-right: auto;
 
   border-radius: 999px;
 }
