@@ -42,7 +42,8 @@ body.philosophy-page {
   padding-bottom: 30px;
   margin-bottom: 20px;
   border-bottom: 2px solid #ebdcd0;
-  max-width: 700px;        /* ← add this */
+  max-width: 720px;        /* ← add this */
+  width: 100%;
   margin-left: auto;       /* ← add this */
   margin-right: auto;      /* ← add this */
 }
@@ -175,6 +176,7 @@ body.philosophy-page {
 ========================= */
 .page-wrapper .bio-narrative {
   max-width: 720px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
