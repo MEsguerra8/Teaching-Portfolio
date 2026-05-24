@@ -38,6 +38,7 @@ body.philosophy-page {
   justify-content: center;   /* ← change this */
   align-items: center;
   gap: 60px;                 /* ← controls space between text and photo */
+  flex-wrap: nowrap;
   padding-bottom: 30px;
   margin-bottom: 20px;
   border-bottom: 2px solid #ebdcd0;
