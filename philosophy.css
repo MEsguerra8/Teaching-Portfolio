@@ -264,6 +264,31 @@ body.philosophy-page {
   color: var(--navy);
 }
 /* =========================
+   BACK BUTTON                   ← ADD FROM HERE
+========================= */
+.back-to-portfolio {
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+.back-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  background-color: var(--navy);
+  padding: 14px 32px;
+  border-radius: 30px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: var(--coral);
+  color: white;
+}
+/* =========================
    MOBILE
 ========================= */
 
