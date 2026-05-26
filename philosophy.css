@@ -230,24 +230,39 @@ body.philosophy-page {
 ========================= */
 
 @media (max-width: 768px) {
+  .page-wrapper .editorial-header {
+    flex-direction: column;    /* stack text and photo vertically */
+    align-items: center;
+    text-align: center;
+  }
 
-  .page-wrapper .editorial-header,
+  .page-wrapper .header-left-text {
+    align-items: center;       /* center the text elements */
+    text-align: center;
+  }
+
+  .page-wrapper .header-divider {
+    margin: 10px auto;         /* center the divider */
+  }
+
+  .page-wrapper .header-right-photo {
+    width: 140px;
+    flex: 0 0 140px;
+  }
+
+  .page-wrapper .narrative-pic {
+    width: 140px;
+    height: 170px;
+  }
+
   .page-wrapper .bio-grid,
   .page-wrapper .story-split,
   .page-wrapper .techniques-grid {
     flex-direction: column;
   }
 
-  .page-wrapper .narrative-pic {
-    height: auto;
-    width: 70%;
-    margin: 0 auto;
-  }
-
   .hero-quote {
     text-align: center;
+    max-width: 100%;
   }
-}
-.page-wrapper .bio-narrative p {
-  margin: 0;
 }
