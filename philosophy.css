@@ -234,11 +234,15 @@ body.philosophy-page {
     flex-direction: column;    /* stack text and photo vertically */
     align-items: center;
     text-align: center;
+    max-width: 100%;        /* ← add this */
+    gap: 20px;
   }
 
   .page-wrapper .header-left-text {
     align-items: center;       /* center the text elements */
     text-align: center;
+    flex: unset;            /* ← add this, removes the 480px constraint */
+    width: 100%;
   }
 
   .page-wrapper .header-divider {
