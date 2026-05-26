@@ -196,6 +196,10 @@ body.philosophy-page {
 /* =========================
    CARDS SECTION
 ========================= */
+.page-wrapper .techniques-grid {
+  display: flex;
+  gap: 30px;
+}
 
 .page-wrapper .narrative-card {
   flex: 1;
