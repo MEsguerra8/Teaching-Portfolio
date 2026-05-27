@@ -1440,28 +1440,21 @@ body.philosophy-page {
   }
 }
 
-.back-btn-lesson {
-  background-color: #008080;
+.card-button.lesson {
+  background-color: #008080; /* teal */
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
 }
-.back-btn-lesson:hover {
+.card-button.lesson:hover {
   background-color: #006666;
 }
 
-.back-btn-resources {
-  background-color: #4CAF50;
+.card-button.resources {
+  background-color: #4CAF50; /* green */
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
 }
-.back-btn-resources:hover {
+.card-button.resources:hover {
   background-color: #3e8e41;
 }
+
 
 
