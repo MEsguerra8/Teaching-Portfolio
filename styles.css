@@ -1471,6 +1471,12 @@ body.philosophy-page {
   background-color: #1f3654; /* darker navy on hover */
   transform: translateY(-2px); /* subtle lift effect */
 }
+/* === Certifications Icons === */
+.cert-card i {
+  font-size: 30px;
+  color: #800000; /* dark maroon */
+  margin-bottom: 10px;
+}
 
 
 
