@@ -1,3 +1,15 @@
+* {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* === Global Styles === */
 body {
   margin: 0;
@@ -506,56 +518,54 @@ body.demo {
 }
 
 @media (max-width: 768px) {
+
+  .container {
+    display: block;
+    width: 100%;
+  }
+
   .sidebar {
-    display: none; /* hide sidebar on mobile */
+    display: none;
   }
 
   .mobile-header {
-    display: block; /* show mobile header */
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .content,
-  .content h1,
-  .content h2,
-  .content h3,
-  .content p {
-    text-align: center; /* center all text inside content */
+    display: block;
+    width: 100%;
   }
 
   .content {
-    padding: 20px;
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto; /* centers content block */
+    padding: 20px 16px;
+    box-sizing: border-box;
+    text-align: center;
   }
 
-  .cards {
+  .cards,
+  .cert-row,
+  .video-grid,
+  .style-techniques-grid,
+  .techniques-grid,
+  .bio-grid,
+  .story-split,
+  .editorial-header,
+  .card-inner-layout {
+    display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    gap: 20px;
   }
 
-  .card {
-    width: 90%;
-    max-width: 500px;
-    margin: 15px auto;
-  }
-
-  .cert-row {
-    flex-direction: column;
-    align-items: center;
+  .card,
+  .cert-card,
+  .video-card,
+  .narrative-card {
     width: 100%;
+    margin: 0;
   }
 
-  .cert-card {
-    width: 90%;
-    max-width: 500px;
-    margin: 15px auto;
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
