@@ -1439,3 +1439,18 @@ body.philosophy-page {
     width: 100%;
   }
 }
+
+.card-button.lesson {
+  background-color: #008080;
+}
+.card-button.lesson:hover {
+  background-color: #006666;
+}
+
+.card-button.resources {
+  background-color: #4CAF50;
+}
+.card-button.resources:hover {
+  background-color: #3e8e41;
+}
+
