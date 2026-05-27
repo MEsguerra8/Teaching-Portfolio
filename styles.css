@@ -1522,5 +1522,32 @@ body {
     margin: 0 auto;
   }
 }
+/* Prevent horizontal scrollbars and force full width */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* stops sideways movement */
+  box-sizing: border-box;
+}
+
+/* Make sure all containers shrink properly on mobile */
+.demo-gallery,
+.video-grid,
+.content,
+.philosophy,
+.cert-card {
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Ensure images never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
