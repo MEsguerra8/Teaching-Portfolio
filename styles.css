@@ -1477,6 +1477,20 @@ body.philosophy-page {
   color: #800000; /* dark maroon */
   margin-bottom: 10px;
 }
+.card-button.demo {
+  background-color: #ff6f61; /* coral */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-button.demo:hover {
+  background-color: #e65b50; /* darker coral */
+  transform: translateY(-2px); /* subtle lift */
+}
 
 
 
