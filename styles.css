@@ -1455,6 +1455,22 @@ body.philosophy-page {
 .card-button.resources:hover {
   background-color: #3e8e41;
 }
+/* Teaching Philosophy button */
+.philosophy .btn {
+  background-color: #2a4d7a; /* navy */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.philosophy .btn:hover {
+  background-color: #1f3654; /* darker navy on hover */
+  transform: translateY(-2px); /* subtle lift effect */
+}
 
 
 
